@@ -12,7 +12,7 @@ const Account = (props) => {
   useEffect(() => {
     const fetchMovies = async () => {
       const response = await fetch(
-        "https://www.bankofcanada.ca/valet/observations/FXRUBCAD/json?recent=1"
+        "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?recent=1"
       );
 
       if (!response.ok) {
@@ -53,18 +53,18 @@ const Account = (props) => {
       <div className="account-container">
         <div className="date">
           <AccountDate />
-          <div className="currency">
-            Chequing expenses for this month {authCtx.expenseTotalPapa} руб
+          <div className="currency-expense">
+            Chequing expenses for this month {authCtx.expenseTotalPapa} cad
           </div>
           <div className="currency">1 usd - {currencyRate} cad </div>
 
-          <div className="currency">
-            Visa Expenses for this month {authCtx.expenseTotalDina} руб
+          <div className="currency-expense">
+            Visa Expenses for this month {authCtx.expenseTotalDina} cad
           </div>
           <div></div>
-          <div className="currency">
+          <div className="currency-expense">
             Line of Credit expenses this month {authCtx.expenseTotalSnezhana}{" "}
-            руб
+            cad
           </div>
         </div>
         <Card className="account-item">
