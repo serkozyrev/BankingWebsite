@@ -71,7 +71,7 @@ const Account = (props) => {
           <div className="account-item__description">
             <h2 className="account-item h2">Visa</h2>
             <div className="account-item__price">
-              {authCtx.accountBalanceDina} руб
+              {authCtx.accountBalanceDina} cad
             </div>
           </div>
         </Card>
@@ -79,7 +79,7 @@ const Account = (props) => {
           <div className="account-item__description">
             <h2 className="account-item h2">Chequing</h2>
             <div className="account-item__price">
-              {authCtx.accountBalanceMine} руб
+              {authCtx.accountBalanceMine} cad
             </div>
           </div>
         </Card>
@@ -87,7 +87,7 @@ const Account = (props) => {
           <div className="account-item__description">
             <h2 className="account-item h2">Line of Credit</h2>
             <div className="account-item__price">
-              {authCtx.accountBalanceSnezhana} руб
+              {authCtx.accountBalanceSnezhana} cad
             </div>
           </div>
         </Card>
