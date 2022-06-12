@@ -54,16 +54,16 @@ const Account = (props) => {
         <div className="date">
           <AccountDate />
           <div className="currency-expense">
-            Chequing expenses for this month {authCtx.expenseTotalPapa} cad
+            Chequing expenses for this month ${authCtx.expenseTotalPapa} cad
           </div>
           <div className="currency">1 usd - {currencyRate} cad </div>
 
           <div className="currency-expense">
-            Visa Expenses for this month {authCtx.expenseTotalDina} cad
+            Visa Expenses for this month ${authCtx.expenseTotalDina} cad
           </div>
           <div></div>
           <div className="currency-expense">
-            Line of Credit expenses this month {authCtx.expenseTotalSnezhana}{" "}
+            Line of Credit expenses this month ${authCtx.expenseTotalSnezhana}{" "}
             cad
           </div>
         </div>
@@ -71,7 +71,7 @@ const Account = (props) => {
           <div className="account-item__description">
             <h2 className="account-item h2">Visa</h2>
             <div className="account-item__price">
-              {authCtx.accountBalanceDina} cad
+              ${authCtx.accountBalanceDina} cad
             </div>
           </div>
         </Card>
@@ -79,7 +79,7 @@ const Account = (props) => {
           <div className="account-item__description">
             <h2 className="account-item h2">Chequing</h2>
             <div className="account-item__price">
-              {authCtx.accountBalanceMine} cad
+              ${authCtx.accountBalanceMine} cad
             </div>
           </div>
         </Card>
@@ -87,7 +87,7 @@ const Account = (props) => {
           <div className="account-item__description">
             <h2 className="account-item h2">Line of Credit</h2>
             <div className="account-item__price">
-              {authCtx.accountBalanceSnezhana} cad
+              ${authCtx.accountBalanceSnezhana} cad
             </div>
           </div>
         </Card>

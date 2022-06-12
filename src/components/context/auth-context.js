@@ -9,6 +9,7 @@ const AuthContext = React.createContext({
 
 export const AuthContextProvider = (props) => {
   const [popupIsShown, setpopupIsShown] = useState(false);
+  const [searchSelected, setSearchSelected] = useState(false);
   const [messageIsShown, setMessageIsShown] = useState(false);
   const [currencyRate, setCurrencyRate] = useState("");
   const [expenseTotalPapa, setExpenseTotalPapa] = useState(0);
@@ -21,6 +22,9 @@ export const AuthContextProvider = (props) => {
   const [expenseTotalDina, setExpenseTotalDina] = useState(0);
   const [expenseTotalSnezhana, setExpenseTotalSnezhana] = useState(0);
   const [approveDeletion, setApproveDeletion] = useState(false);
+  const [formIsValid, setFormIsValid] = useState(false);
+  const [searchexpenseDina, setSearchExpenseDina] = useState([]);
+  const [searchexpenses, setSearchExpenses] = useState([]);
 
   const rateHandler = (data) => {
     setCurrencyRate(data);
@@ -127,6 +131,8 @@ export const AuthContextProvider = (props) => {
   };
 
   const contextValue = {
+    formIsValid,
+    setFormIsValid,
     deleteTask: deletionConfirmHandler,
     messageIsShown,
     approveDeletion,
@@ -135,7 +141,13 @@ export const AuthContextProvider = (props) => {
     currencyRate,
     expenseTotalPapa,
     expenseTotalDina,
+    searchSelected,
+    setSearchSelected,
     expenseTotalSnezhana,
+    searchexpenses,
+    searchexpenseDina,
+    setSearchExpenses,
+    setSearchExpenseDina,
     rateHandler,
     totalSum,
     totalSumDina,

@@ -6,9 +6,9 @@ const ConfirmMessage = (props) => {
   const authCtx = useContext(AuthContext);
   return (
     <>
-      <h3>Вы действительно хотите удалить запись?</h3>
-      <Button onClick={props.infoBool}>Подтвердить</Button>
-      <Button onClick={authCtx.closeMessage}>Отменить</Button>
+      <h3>Do you really want to delete this record?</h3>
+      <Button onClick={props.infoBool}>Confirm</Button>
+      <Button onClick={authCtx.closeMessage}>Cancel</Button>
     </>
   );
 };

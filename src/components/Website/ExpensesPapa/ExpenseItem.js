@@ -50,7 +50,7 @@ function ExpenseItem(props) {
                   inverse
                 >
                   {" "}
-                  Копировать{" "}
+                  Copy{" "}
                 </Button>
               ) : (
                 " "
@@ -65,7 +65,7 @@ function ExpenseItem(props) {
                   inverse
                 >
                   {" "}
-                  Редактировать{" "}
+                  Edit{" "}
                 </Button>
               ) : (
                 " "
@@ -74,10 +74,10 @@ function ExpenseItem(props) {
           </div>
 
           <div className="expense-item__price-info">
-            <div className="expense-item__price">{props.amount} руб</div>
+            <div className="expense-item__price">{props.amount} cad</div>
 
             {containword && (
-              <div className="expense-item__price">{props.dollars} cad</div>
+              <div className="expense-item__price">{props.dollars} usd</div>
             )}
           </div>
         </div>

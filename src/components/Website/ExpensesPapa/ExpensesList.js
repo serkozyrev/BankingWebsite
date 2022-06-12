@@ -25,7 +25,33 @@ const ExpensesList = (props) => {
       fetchMovies().catch((error) => {});
     } catch (err) {}
   }, []);
-
+  if (authCtx.searchSelected) {
+    return (
+      <ul className="expenses-list">
+        <h3 className="expenses-list h3">
+          Results for Chequing/Line of Credit
+        </h3>
+        <div className="expenses-list items">
+          {authCtx.searchexpenseDina &&
+            authCtx.searchexpenseDina.map((expense) => (
+              <ExpenseItem
+                key={expense.id}
+                id={expense.id}
+                title={expense.description}
+                amount={expense.amount}
+                day={expense.day}
+                month={expense.month}
+                dollars={expense.amountindollar}
+                year={expense.year}
+                rate={authCtx.currencyRate}
+                category={expense.category}
+                type={expense.type}
+              />
+            ))}
+        </div>
+      </ul>
+    );
+  }
   return (
     <ul className="expenses-list">
       <h3 className="expenses-list h3">Chequing/Line of Credit Expenses</h3>

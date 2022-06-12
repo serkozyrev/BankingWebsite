@@ -44,7 +44,7 @@ const RevenueItem = (props) => {
                   inverse
                 >
                   {" "}
-                  Копировать{" "}
+                  Copy{" "}
                 </Button>
               ) : (
                 " "
@@ -59,7 +59,7 @@ const RevenueItem = (props) => {
                   to={`/edit/${props.id}&${type}`}
                 >
                   {" "}
-                  Редактировать{" "}
+                  Edit{" "}
                 </Button>
               ) : (
                 " "
