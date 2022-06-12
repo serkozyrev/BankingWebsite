@@ -67,16 +67,7 @@ const RevenueItem = (props) => {
             </div>
           </div>
           <div className="revenue-item__price-info">
-            {mouseInside ? (
-              <Button
-                className="revenue_delete"
-                onClick={() => authCtx.deleteEntry(props.id, type)}
-                inverse
-              >
-                X
-              </Button>
-            ) : null}
-            <div className="revenue-item__price">{props.amount} руб</div>
+            <div className="revenue-item__price">${props.amount} cad</div>
           </div>
         </div>
       </Card>
