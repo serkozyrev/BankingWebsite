@@ -19,6 +19,7 @@ const RevenueList = (props) => {
         throw new Error("Something went wrong!");
       }
       const responseData = await response.json();
+      console.log(responseData.revenues);
       authCtx.setRevenuesList(responseData.revenues);
     };
     try {
