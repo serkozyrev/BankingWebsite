@@ -19,6 +19,8 @@ const EditRecord = (props) => {
   const [validatedCategory, setValidCategory] = useState();
   const [providedDate, setProvidedDate] = useState("");
   const [validatedDate, setValidDate] = useState();
+  const [providedAccount, setProvidedAccount] = useState("");
+  const [validatedAccount, setValidAccount] = useState();
 
   const recordId = useParams().rid;
   const recordType = useParams().type;
@@ -54,6 +56,13 @@ const EditRecord = (props) => {
   const editvalidateCategoryHandler = () => {
     setValidCategory(providedCategory !== "");
   };
+  const accountHandler = (event) => {
+    setProvidedAccount(event.target.value);
+  };
+
+  const validateAccountHandler = () => {
+    setValidAccount(providedAccount !== "");
+  };
 
   if (authCtx.approveDeletion) {
     console.log(recordId, recordType);
@@ -82,6 +91,7 @@ const EditRecord = (props) => {
           setProvidedAmount(res.expense.amount);
           setProvidedDescription(res.expense.description);
           setProvidedCategory(res.expense.category);
+          setProvidedAccount(res.expense.accountType);
         } else if (res.revenue) {
           setProvidedAmount(res.revenue.amount);
           setProvidedDescription(res.revenue.description);
@@ -144,6 +154,7 @@ const EditRecord = (props) => {
           date: providedDate,
           category: providedCategory,
           amount: providedAmount,
+          accountType: providedAccount,
           rate: authCtx.currencyRate,
         }),
       })
@@ -267,6 +278,33 @@ const EditRecord = (props) => {
                   )}
                 </div>
               )}
+              <div
+                className={`control ${
+                  validatedAccount === false ? "invalid" : "check"
+                }`}
+              >
+                <h6 className="form-label" htmlFor="description">
+                  Вид Аккаунта
+                </h6>
+                <select
+                  id="gender"
+                  className="form-select field"
+                  value={providedAccount}
+                  onChange={accountHandler}
+                  onBlur={validateAccountHandler}
+                  required
+                >
+                  <option defaultValue>Choose...</option>
+                  <option value="DinaAccount">Visa</option>
+                  <option value="PapaAccount">Chequing</option>
+                  <option value="SnezhanaAccount">Line of Credit</option>
+                </select>
+                {validatedAccount === false && (
+                  <p className="error-check">
+                    Пожалуйста, выберите категорию транзакции
+                  </p>
+                )}
+              </div>
               <div
                 className={`control ${
                   validatedAmount === false ? "invalid" : "check"

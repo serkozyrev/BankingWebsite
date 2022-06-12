@@ -1,11 +1,13 @@
 .account-container {
   display: flex;
   margin-top: 20px;
+  margin-bottom: 32px;
   width: 90rem;
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-around;
   margin-right: 10rem;
+  /* height: 15rem; */
 }
 
 .account {
@@ -32,6 +34,26 @@
   padding: 10px;
   width: 10.5rem;
   height: 3.5rem;
+  border: 2px solid #258cc7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.currency-box {
+  width: 6.5rem;
+}
+
+.select-currency {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-right: 10px;
+
+  width: 13rem;
+  height: 5.5rem;
   border: 2px solid #258cc7;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
