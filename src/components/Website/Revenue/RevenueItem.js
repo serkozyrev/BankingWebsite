@@ -67,7 +67,7 @@ const RevenueItem = (props) => {
             </div>
           </div>
           <div className="revenue-item__price-info">
-            <div className="revenue-item__price">${props.amount} cad</div>
+            <div className="revenue-item__price">${props.amount}cad</div>
           </div>
         </div>
       </Card>
