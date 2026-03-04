@@ -1,7 +1,6 @@
 .account-container {
   display: flex;
   margin-top: 20px;
-  margin-bottom: 32px;
   width: 90rem;
   flex-wrap: wrap;
   align-content: center;
